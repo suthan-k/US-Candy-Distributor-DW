@@ -1,4 +1,4 @@
-# **End-to-End Data Warehouse for US Candy Distributor**
+# **End-to-End BI Solution for a US Candy Distributor**
 
 ## **Project Overview**
 
