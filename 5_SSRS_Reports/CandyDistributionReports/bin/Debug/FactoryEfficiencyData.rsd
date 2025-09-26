@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>CandyDistributionDW_DS</DataSourceReference>
+      <CommandText>SELECT     fd.FactoryName,    
+COUNT(DISTINCT df.CustomerKey)   AS    NumberOfCustomers, 
+COUNT(DISTINCT df.ProductKey)      AS     NumberOfProducts,
+AVG(df.ShippingDistanceKM)    AS    AvgDistance,                
+SUM(df.Profit)    AS    TotalProfit,   
+SUM(df.Profit) / AVG(df.ShippingDistanceKM)     AS   ProfitPerKM 
+FROM       DistributionFact df 
+JOIN          FactoryDim fd      ON      df.FactoryKey = fd.FactoryKey 
+GROUP BY      fd.FactoryName 
+ORDER BY       TotalProfit    DESC</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="FactoryName">
+        <DataField>FactoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="NumberOfCustomers">
+        <DataField>NumberOfCustomers</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="AvgDistance">
+        <DataField>AvgDistance</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="NumberOfProducts">
+        <DataField>NumberOfProducts</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="TotalProfit">
+        <DataField>TotalProfit</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="ProfitPerKM">
+        <DataField>ProfitPerKM</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

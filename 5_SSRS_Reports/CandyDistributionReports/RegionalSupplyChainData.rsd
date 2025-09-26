@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>CandyDistributionDW_DS</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@RegionName">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT      fd.FactoryName,  pd.ProductName,  SUM(df.UnitsSold)   AS   TotalUnits,          AVG(df.ShippingDistanceKM)    AS    AvgDistance
+FROM        DistributionFact df 
+JOIN           FactoryDim fd      ON      df.FactoryKey = fd.FactoryKey 
+JOIN           ProductDim pd    ON      df.ProductKey = pd.ProductKey 
+JOIN           CustomerDim cd    ON    df.CustomerKey = cd.CustomerKey 
+WHERE      cd.RegionName = @RegionName 
+GROUP BY     fd.FactoryName, pd.ProductName</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="FactoryName">
+        <DataField>FactoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ProductName">
+        <DataField>ProductName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="TotalUnits">
+        <DataField>TotalUnits</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="AvgDistance">
+        <DataField>AvgDistance</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
