@@ -51,23 +51,30 @@ The core transactional logic is contained within a dedicated Data Flow Task for 
 
 Below are screenshots of the individual SSIS Data Flow Tasks for each dimension and the fact table, illustrating the entire ETL process.
 
-- **Customer Dimension Flow:**  
+- **Customer Dimension Flow:**
+   
   ![Customer Dimension Data Flow](./ETL_Screenshots/CustomerDim_dataflow.png)
   
-- **Date Dimension Flow:** 
+- **Date Dimension Flow:**
+  
   ![Date Dimension Data Flow](./ETL_Screenshots/DateDim_dataflow.png)  
   
-- **Factory Dimension Flow:**  
+- **Factory Dimension Flow:**
+  
   ![Factory Dimension Data Flow](./ETL_Screenshots/FactoryDim_dataflow.png)  
   
-- **Location Dimension Flow:**  
+- **Location Dimension Flow:**
+  
   ![Location Dimension Data Flow](./ETL_Screenshots/LocationDim_dataflow.png) 
   
 - **Product Dimension Flow:**
+  
   ![Product Dimension Data Flow](./ETL_Screenshots/ProductDim_dataflow.png)  
   
 - **Ship Mode Dimension Flow:**
+  
   ![Ship Mode Dimension Data Flow](./ETL_Screenshots/ShipModeDim_dataflow.png)
   
-- **Distribution Fact Table Flow:**  
+- **Distribution Fact Table Flow:**
+    
   ![Distribution Fact Data Flow](./ETL_Screenshots/DistributionFact_dataflow.png)
