@@ -10,7 +10,7 @@ The project followed a multi-layered architectural approach to ensure data integ
 
 #### **Source Files \-\> Operational Databases \-\> Data Warehouse**
 
-* **Operational Databases:** Raw source files were first normalized into three distinct OLTP databases (ManufacturingDB, SalesDB, LogisticsDB) to simulate a real-world enterprise environment.  
+* **Operational Databases:** Raw source files were first normalized into three distinct OLTP databases (CandyManufacturingDB, CandySalesDB, CandyLogisticsDB) to simulate a real-world enterprise environment.  
 * **Data Warehouse:** A dimensional model was designed using a **Star Schema**. This model is optimized for fast analytical queries and is the industry standard for BI tools.
 
 ## **2\. ETL Process using SSIS**
