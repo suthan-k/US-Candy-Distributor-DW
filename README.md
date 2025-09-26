@@ -30,17 +30,17 @@ The final BI solution was delivered through SSRS reports and an interactive Tabl
 ### **SSRS Reports**
 
 Four detailed, operational reports were created to answer specific business questions for stakeholders. This included parameterized, grouped, and matrix-style reports.  
-(See the /5\_SSRS\_Reports folder for the final PDFs.)
+(See the [5_SSRS_Reports folder](/5_SSRS_Reports) for the final PDFs.)
 
 ### **Tableau Dashboard**
 
 A strategic, interactive dashboard was created to provide a high-level overview of supply chain efficiency. The live dashboard can be viewed on Tableau Public.  
-(The packaged workbook (.twbx) is also available in the /6\_Tableau\_Dashboard folder.)
+(The packaged workbook (.twbx) is also available in the [6_Tableau_Dashboard folder.](/6_Tableau_Dashboard))
 
 ## **Project Links & Resources**
 
-* **Tableau Public Dashboard:** [https://public.tableau.com/views/USCandyDistributor-SupplyChainEfficiencyAnalysis/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display\_count=n&:origin=viz\_share\_link](https://public.tableau.com/views/USCandyDistributor-SupplyChainEfficiencyAnalysis/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)  
-* **Dataset Source:** [https://mavenanalytics.io/data-playground/us-candy-distributor?order=date\_added%2Cdesc\&search=US+Candy+Distributor\&tags=Transportation](https://mavenanalytics.io/data-playground/us-candy-distributor?order=date_added%2Cdesc&search=US+Candy+Distributor&tags=Transportation)
+* **Tableau Public Dashboard:** [Tableau Dashboard](https://public.tableau.com/views/USCandyDistributor-SupplyChainEfficiencyAnalysis/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)  
+* **Dataset Source:** [US Candy distributor Dataset](https://mavenanalytics.io/data-playground/us-candy-distributor?order=date_added%2Cdesc&search=US+Candy+Distributor&tags=Transportation)
 
 ## **Technologies Used**
 
